@@ -15,7 +15,7 @@ class HostsDetailController: UIViewController {
 
         self.edgesForExtendedLayout = .None
         dispatch_async(dispatch_get_global_queue(0, 0)) {
-            if let path = HostsDownloader.pathOfHosts{
+            if let path = HostsDownloader.pathOfAbsoluteString{
                 let contentOfHosts = try! String.init(contentsOfURL: NSURL(string:path)!)
                 
                 dispatch_async(dispatch_get_main_queue(), {
