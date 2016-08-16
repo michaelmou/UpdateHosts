@@ -14,6 +14,7 @@
 		2224CC401D62E6C60055696D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2224CC3F1D62E6C60055696D /* Assets.xcassets */; };
 		2224CC431D62E6C60055696D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2224CC411D62E6C60055696D /* LaunchScreen.storyboard */; };
 		2224CC4B1D62E84E0055696D /* DownloadHosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224CC4A1D62E84E0055696D /* DownloadHosts.swift */; };
+		4CD1A2351D63489200B2BD4A /* HostsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD1A2341D63489200B2BD4A /* HostsDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2224CC441D62E6C60055696D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2224CC4A1D62E84E0055696D /* DownloadHosts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadHosts.swift; sourceTree = "<group>"; };
 		2A388F093EF0071FAFAB4858 /* Pods-UpdateHosts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpdateHosts.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpdateHosts/Pods-UpdateHosts.release.xcconfig"; sourceTree = "<group>"; };
+		4CD1A2341D63489200B2BD4A /* HostsDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostsDetailController.swift; sourceTree = "<group>"; };
 		959267243338F20EFA1F6344 /* Pods-UpdateHosts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpdateHosts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpdateHosts/Pods-UpdateHosts.debug.xcconfig"; sourceTree = "<group>"; };
 		AE6F58E4BD3FA4BB7ADA02C9 /* Pods_UpdateHosts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpdateHosts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 			children = (
 				2224CC4A1D62E84E0055696D /* DownloadHosts.swift */,
 				2224CC381D62E6C60055696D /* AppDelegate.swift */,
+				4CD1A2341D63489200B2BD4A /* HostsDetailController.swift */,
 				2224CC3A1D62E6C60055696D /* ViewController.swift */,
 				2224CC3C1D62E6C60055696D /* Main.storyboard */,
 				2224CC3F1D62E6C60055696D /* Assets.xcassets */,
@@ -126,7 +129,7 @@
 				TargetAttributes = {
 					2224CC341D62E6C60055696D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9AC24BAB9K;
+						DevelopmentTeam = 56ZJQ8WAX3;
 					};
 				};
 			};
@@ -216,6 +219,7 @@
 			files = (
 				2224CC3B1D62E6C60055696D /* ViewController.swift in Sources */,
 				2224CC4B1D62E84E0055696D /* DownloadHosts.swift in Sources */,
+				4CD1A2351D63489200B2BD4A /* HostsDetailController.swift in Sources */,
 				2224CC391D62E6C60055696D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,10 +336,13 @@
 			baseConfigurationReference = 959267243338F20EFA1F6344 /* Pods-UpdateHosts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UpdateHosts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.Michael.UpdateHosts;
+				PRODUCT_BUNDLE_IDENTIFIER = org.Michael.UpdateHosts2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -344,10 +351,13 @@
 			baseConfigurationReference = 2A388F093EF0071FAFAB4858 /* Pods-UpdateHosts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UpdateHosts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.Michael.UpdateHosts;
+				PRODUCT_BUNDLE_IDENTIFIER = org.Michael.UpdateHosts2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x2J-bC-7x3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,11 +16,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q4o-wl-Uha">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3h-jw-6ZA">
+                                <rect key="frame" x="251" y="243" width="99" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="UUT-Da-unJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="uFD-eR-qSF"/>
+                                </constraints>
+                                <state key="normal" title="view the hosts"/>
+                                <connections>
+                                    <action selector="buttonOfViewHostsDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="moH-c2-cDh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd2-A2-0nY">
+                                <rect key="frame" x="254" y="285" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="IUW-aQ-51l"/>
+                                    <constraint firstAttribute="height" constant="30" id="VGS-6N-5Ov"/>
+                                </constraints>
+                                <state key="normal" title="Update hosts"/>
+                                <connections>
+                                    <action selector="buttonOfUpdateDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="82p-Xe-dte"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utK-Wc-fuW">
+                                <rect key="frame" x="237" y="331" width="127" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dTk-0Y-2Yq"/>
+                                    <constraint firstAttribute="width" constant="127" id="kxY-bt-QZT"/>
+                                </constraints>
+                                <state key="normal" title="Copy to pastboard"/>
+                                <connections>
+                                    <action selector="buttonOfCopyDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yaa-k9-jAQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="utK-Wc-fuW" firstAttribute="top" secondItem="Nd2-A2-0nY" secondAttribute="bottom" constant="16" id="49m-eo-Tp8"/>
+                            <constraint firstItem="Nd2-A2-0nY" firstAttribute="top" secondItem="S3h-jw-6ZA" secondAttribute="bottom" constant="12" id="ALS-Bk-pnc"/>
+                            <constraint firstItem="S3h-jw-6ZA" firstAttribute="leading" secondItem="Nd2-A2-0nY" secondAttribute="trailing" constant="-95" id="E8w-zg-DLM"/>
+                            <constraint firstItem="q4o-wl-Uha" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FBv-ai-FvK"/>
+                            <constraint firstItem="Nd2-A2-0nY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pne-an-wes"/>
+                            <constraint firstItem="q4o-wl-Uha" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cEH-d5-LCM"/>
+                            <constraint firstItem="utK-Wc-fuW" firstAttribute="leading" secondItem="Nd2-A2-0nY" secondAttribute="trailing" constant="-109" id="gYP-Ye-ag2"/>
+                            <constraint firstItem="Nd2-A2-0nY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="meg-38-u7r"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Idt-Hd-hB6"/>
+                    <connections>
+                        <outlet property="activityIndecator" destination="q4o-wl-Uha" id="U1f-uo-Ol6"/>
+                        <outlet property="buttonOfCopy" destination="utK-Wc-fuW" id="XSC-Ih-QLf"/>
+                        <outlet property="buttonOfViewDetail" destination="S3h-jw-6ZA" id="h4g-CO-sKi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1122" y="324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sFL-Je-HLm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x2J-bC-7x3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rjf-9v-yzg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ihl-t2-uTH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vc-IQ-DFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="-368"/>
         </scene>
     </scenes>
 </document>
