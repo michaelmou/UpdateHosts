@@ -1,2 +1,2 @@
 # UpdateHosts
-an app to download latest hosts, then copy to the Pasteboard
+an app to download the latest hosts, then copy to the Pasteboard
